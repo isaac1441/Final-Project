@@ -271,7 +271,7 @@ pub fn process_and_track(progress: Arc<Progress>, file_path: PathBuf){
     } else {
         //error reporting with context
         for error in &result.errors {
-            println!("Error: {}, {}", error.error_type, error.description);
+            println!("Error processing {}: [{}] {}", error.file_path, error.error_type, error.description);
         }
     }
     
